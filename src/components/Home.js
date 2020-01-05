@@ -4,7 +4,6 @@ import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
 import dubmledoreImage from "../img/dumbledore.gif";
 import grifyImage from "../img/grify.gif";
-import soundfile from "../assets/hogwarts.mpeg";
 
 var backgroundImage = {
     width: "100%",
@@ -25,21 +24,8 @@ class Home extends React.Component {
         this.state = {
             showWelcomeThings: false
         };
-        this.audio = new Audio(soundfile);
     }
     componentWillMount() {
-        this.audio.addEventListener(
-            "ended",
-            function() {
-                this.currentTime = 0;
-                this.audio.load();
-                this.audio.play();
-            },
-            false
-        );
-        this.audio.load();
-        this.audio.play();
-
         setTimeout(() => {
             this.setState({ showWelcomeThings: true });
         }, 3000);
