@@ -10,7 +10,7 @@ class App extends React.Component {
         super(props);
         this.audio = new Audio(soundfile);
     }
-    componentWillMount() {
+    componentDidMount() {
         this.audio.play();
         this.audio.addEventListener(
             "ended",
