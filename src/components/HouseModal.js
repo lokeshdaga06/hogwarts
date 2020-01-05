@@ -23,7 +23,7 @@ class HouseModal extends Component {
                             Congratulations !!!
                         </h5>
                         <p className="text-center" style={{ color: "green" }}>
-                            You are selected as a {this.props.selectedHouse}
+                            Welcome to {this.props.selectedHouse}
                         </p>
                         <img
                             src={this.props.selectedImage}
